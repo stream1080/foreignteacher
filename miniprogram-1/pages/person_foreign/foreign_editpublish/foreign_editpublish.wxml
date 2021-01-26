@@ -1,0 +1,36 @@
+<!--pages/person_foreign/foreign_editpublish/foreign_editpublish.wxml-->
+<view class="container">
+  <form bindsubmit="formSubmit" bindreset="formReset">
+    <view class="row">
+      <text>服务：</text>
+      <input type="text" name="service" placeholder="请输入服务" value="{{service}}" />
+    </view>
+
+    <view class="row">
+      <text>时间：</text>
+      <input type="text" name="time" placeholder="请输入时间" value="{{time}}" />
+    </view>
+
+    <view class="row">
+      <text>地址：</text>
+      <input type="text" name="address" placeholder="请输入地址" value="{{address}}" />
+    </view>
+
+    <view class="row">
+      <text>电话：</text>
+      <input type="text" name="telephone" placeholder="请输入电话" value="{{telephone}}" />
+    </view>
+
+    <!-- <view class="row">
+      <text>电话：</text>
+      <input type="text" name="telephone" placeholder="请输入电话" value="{{telephone}}" />
+    </view> -->
+
+    <view class="row">
+      <button type="primary" form-type="submit">提交</button>
+      <button type="primary" form-type="reset">清空</button>
+    </view>
+
+  </form>
+</view>
+

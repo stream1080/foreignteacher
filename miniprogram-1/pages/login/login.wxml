@@ -1,0 +1,52 @@
+<!-- 用户登录 -->
+<view class='login'>
+    <image src='../../images/login.jpg' class='login-bg'></image>
+    <view class='login-wrap'>
+        <form bindsubmit="formSubmit" bindreset="formReset">
+            <view class='title'>欢迎使用</view>
+            <view class='inp'>
+                <input type="text" name="username" value="{{username}}" placeholder="请输入账号" />
+            </view>
+            
+            <view class='inp'>
+                <input class="inputText" type="password" name="password" value="{{password}}" password="true"
+                    placeholder="请输入密码" />
+            </view>
+
+            <view class='login-btn'>
+                <button class='btn1' size='mini' bindtap="goToRegist">注册</button>
+                <button class="btn2" type="primary" size="mini" form-type='submit'>登录</button>
+            </view>
+        </form>
+
+    </view>
+</view>
+
+
+
+<!-- <view class='user-identity'>
+              <checkbox-group class="identity">
+                <label>
+                    <checkbox value='ChineseUsers' />ChineseUsers  
+                </label>
+
+                <label>
+                    <checkbox value='ForeignTeacher' />ForeignTeacher
+                </label>
+              </checkbox-group>
+            </view> -->
+
+<!-- <button class="btn1" type="primary" size="mini" form-type='submit'>登录</button>
+<button class='btn2' size='mini' bindtap="goToRegist">注册</button> -->
+
+
+            <!-- <view class='user-identity'>
+                <radio-group class="identity" bindchange="userType">
+                    <label>
+                        <radio value='C' />ChineseUser
+                    </label>
+                    <label>
+                        <radio value='F' />ForeignTeacher
+                    </label>
+                </radio-group>
+            </view> -->

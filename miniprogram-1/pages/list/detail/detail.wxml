@@ -1,0 +1,17 @@
+<view class="nav">
+  <text class="welcome"></text>
+  <image src="/images/wbb5.jpg" mode="aspectFill" bindtap="changeImage"></image>
+</view>
+
+
+<view class="content">
+  <view>姓名：{{userName}}</view>
+  <view>性别：{{sex}}</view>
+  <view>年龄：{{age}}</view>
+  <view>需求：{{demand}}</view>
+  <view>时间：{{time}}</view>
+  <view>地点：{{address}}</view>
+  <view>电话：{{telephone}}</view>
+  <view>其他：{{context}}</view>
+  <button type="primary" bindtap="callTelephone" data-telephone="{{telephone}}">电话预约</button>
+</view>

@@ -1,0 +1,62 @@
+<!--pages/operation.wxml-->
+<view class="container">
+  <form bindsubmit="formSubmit" bindreset="formReset">
+    
+    <view class="row">
+      <text>姓名：</text>
+      <input type="text" name="userName" placeholder="请输入姓名" value="{{userName}}" />
+    </view>
+
+    <view class="row">
+      <text>年龄：</text>
+      <input type="text" name="age" placeholder="请输入年龄" value="{{age}}" />
+    </view>
+
+    <view class="row">
+      <text>性别：</text>
+      <input type="text" name="sex" placeholder="请输入性别" value="{{sex}}" />
+    </view>
+
+    <view class="row">
+      <text>电话：</text>
+      <input type="text" name="telephone" placeholder="请输入电话" value="{{telephone}}" />
+    </view>
+
+    <view class="row">
+      <text>地区：</text>
+      <input type="text" name="address" placeholder="请输入地区" value="{{address}}" />
+    </view>
+
+    <view class="row">
+      <text>国籍：</text>
+      <input type="text" name="nationality" placeholder="请输入国籍" value="{{nationality}}" />
+    </view>
+
+    <view class="row">
+      <text>语言：</text>
+      <input type="text" name="language" placeholder="请输入语言" value="{{language}}" />
+    </view>
+
+    <!-- <view class="row">
+      <text>密码：</text>
+      <input type="text" name="password" placeholder="请输入密码" value="{{password}}" />
+    </view> -->
+
+
+    <view class="row">
+      <button type="primary" form-type="submit">提交</button>
+      <button type="primary" form-type="reset">清空</button>
+    </view>
+
+  </form>
+</view>
+
+<!-- 
+<view class="row">
+      <text>区域名：</text>
+      <input type="text" name="areaName" placeholder="请输入区域名" value="{{areaName}}" />
+    </view>
+    <view class="row">
+      <text>优先级：</text>
+      <input type="number" name="priority" placeholder="数值越大越靠前" value="{{priority}}" />
+    </view> -->

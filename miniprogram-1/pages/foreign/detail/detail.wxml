@@ -1,0 +1,18 @@
+<!--pages/foreign/detail/detail.wxml-->
+<view class="nav">
+  <text class="welcome"></text>
+  <image src="/images/ft2.jpg" mode="aspectFill" bindtap="changeImage"></image>
+</view>
+
+
+<view class="content">
+  <view>姓名：{{userName}}</view>
+  <view>国籍：{{nationality}}</view>
+  <view>语言：{{language}}</view>
+  <view>外教服务：{{service}}</view>
+  <view>时间：{{time}}</view>
+  <view>地点：{{address}}</view>
+  <view>电话：{{telephone}}</view>
+  <view>其他：{{context}}</view>
+  <button type="primary" bindtap="callTelephone" data-telephone="{{telephone}}">电话预约</button>
+</view>

@@ -1,0 +1,63 @@
+<!--pages/person/person.wxml-->
+<view class="avatar">
+  <image src="/images/wbb5.jpg" mode="aspectFill"></image>
+  <view class="avatar2">{{userName}}</view>
+</view>
+
+<view class="content">
+
+    <view bindtap="goInfor" data-userid="{{userId}}">
+      <image src="/images/me_info.png"></image>
+      <view>信息维护</view>
+    </view>
+
+  <view bindtap="goPublish" data-userid="{{userId}}">
+    <image src="/images/publish.png"></image>
+    <view>发  布</view>
+  </view>
+
+  <view bindtap="goManage" data-userid="{{userid}}">
+    <image src="/images/publish_manage.png"></image>
+    <view>发布管理</view>
+  </view>
+
+</view>
+
+<view class="content">
+
+  <view>
+    <image src="/images/reserve.png"></image>
+    <view>其他</view>
+  </view>
+  <view bindtap="goEditPassword">
+    <image src="/images/hard.png"></image>
+    <view>修改密码</view>
+  </view>
+
+  <view bindtap="goLoginOut">
+    <image src="/images/out.png"></image>
+    <view>注销登录</view>
+  </view>
+  
+</view>
+
+
+
+
+
+
+
+<!-- <view class="menu">
+  <view bindtap="info">个人资料
+    <image class="arrow" src="/images/arrow.png"></image>
+  </view>
+  <view bindtap="order">订单物流查询
+    <image class="arrow" src="/images/arrow.png"></image>
+  </view>
+  <view bindtap="address">选择收获地址
+    <image class="arrow" src="/images/arrow.png"></image>
+  </view>
+  <view bindtap="contact">客服联系方式
+    <image class="arrow" src="/images/arrow.png"></image>
+  </view>
+</view> -->

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.demo.dao.RecruitDao">
+
+    <select id="queryRecruit" resultType="com.example.demo.entity.Recruit">
+        SELECT recruitId, userId,
+               time, demand,address,telephone,context
+        FROM recruit
+    </select>
+
+    <select id="queryRecruitById" resultType="com.example.demo.entity.Recruit">
+        SELECT recruitId, userId,
+               time, demand,address,telephone,context
+        FROM recruit
+        WHERE
+            recruitId = #{recruitId}
+    </select>
+
+    <insert id="insertRecruit" useGeneratedKeys="true" keyProperty="recruitId"
+            keyColumn="recruitId" parameterType="com.example.demo.entity.Recruit">
+        INSERT INTO
+            recruit(userId,time, demand,address,telephone,context)
+        VALUES
+        (#{userId},#{time},#{demand},#{address},#{telephone},#{context})
+    </insert>
+
+    <update id="updateRecruit" parameterType="com.example.demo.entity.Recruit">
+        update recruit
+        <set>
+            <if test="userId != null">userid=#{userId},</if>
+            <if test="time != null">time=#{time},</if>
+            <if test="demand != null">demand=#{demand},</if>
+            <if test="address != null">address=#{address},</if>
+            <if test="telephone != null">telephone=#{telephone},</if>
+            <if test="context != null">context=#{context}</if>
+        </set>
+        where recruitId=#{recruitId}
+    </update>
+
+    <delete id="deleteRecruit">
+        DELETE FROM
+            recruit
+        WHERE
+            recruitid = #{recruitId}
+    </delete>
+
+</mapper>
+    

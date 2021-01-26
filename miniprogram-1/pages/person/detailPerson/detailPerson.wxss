@@ -1,0 +1,26 @@
+/* pages/person/detailPerson/detailPerson.wxss */
+.nav {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.welcome {
+  font-size: 50rpx;
+  color: #f7982a;
+  margin: 40rpx 0;
+}
+
+.content {
+  font-size: 32rpx;
+  width: 400rpx;
+  margin: 50rpx auto;
+}
+
+.content > view {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 20rpx 0;
+  color: blueviolet;
+}

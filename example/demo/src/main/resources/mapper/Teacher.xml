@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.demo.dao.TeacherDao">
+
+    <select id="queryTeacher" resultType="com.example.demo.entity.Teacher">
+        SELECT teacherId, userId,
+               time,service,address,telephone,context,password
+        FROM teacher
+    </select>
+
+    <select id="queryTeacherById" resultType="com.example.demo.entity.Teacher">
+        SELECT teacherId, userId,
+            time,service,address,telephone,context,password
+        FROM teacher
+        WHERE
+        teacherId = #{teacherId}
+    </select>
+
+
+    <insert id="insertTeacher" useGeneratedKeys="true" keyProperty="teacherId"
+            keyColumn="teacherId" parameterType="com.example.demo.entity.Teacher">
+        INSERT INTO teacher
+            (userId,time,service,address,telephone,context)
+        VALUES
+        (#{userId},#{time},#{service},#{address},#{telephone},#{context})
+    </insert>
+
+    <update id="updateTeacher" parameterType="com.example.demo.entity.Teacher">
+        update teacher
+        <set>
+            <if test="teacherId != null">teacherId=#{teacherId},</if>
+            <if test="userId != null">userId=#{userId},</if>
+            <if test="time != null">time=#{time},</if>
+            <if test="service != null">service=#{service},</if>
+            <if test="address != null">address=#{address},</if>
+            <if test="telephone != null">telephone=#{telephone},</if>
+            <if test="context != null">context=#{context},</if>
+            <if test="password != null">password=#{password}</if>
+        </set>
+        where teacherId=#{teacherId}
+    </update>
+
+    <delete id="deleteTeacher">
+        DELETE FROM
+            teacher
+        WHERE
+            teacherid =
+            #{teacherId}
+    </delete>
+
+    <!--    <select id="teacherlogin" resultType="com.example.demo.entity.Teacher">-->
+    <!--        SELECT teacherId, teacherName,-->
+    <!--               nationality , language , freetime,service,address,telephone,context,password-->
+    <!--        FROM teacher-->
+    <!--        WHERE-->
+    <!--            teacherId = #{teacherId} and password = #{password}-->
+    <!--    </select>-->
+
+</mapper>
+    

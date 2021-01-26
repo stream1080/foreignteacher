@@ -1,0 +1,59 @@
+<!--pages/list/list.wxml-->
+
+
+
+<view class="container">
+  <scroll-view scroll-y="true">
+    <view>
+      <block wx:for="{{list}}">
+
+        <navigator class="link" url="../list/detail/detail?recruitId={{item.recruitId}}&userId={{item.userId}}">
+          <view class="widget" wx:if="{{item.time!=null}}">
+            <view class="imgFa">
+              <image src="{{item.url}}" class="img"></image>
+            </view>
+            <view class="widget-right">
+
+              <view style="text-align: left;  display: inline-block">
+                <view class="column">需求：{{item.demand}}</view>
+                <view class="column">{{item.time}}</view>
+                <view class="column">地点：{{item.address}}</view>
+                <view class="column">电话：{{item.telephone}}</view>
+              </view>
+
+            </view>
+          </view>
+        </navigator>
+        <!-- </view> -->
+      </block>
+    </view>
+  </scroll-view>
+
+</view>
+
+<!-- 
+<view style="text-align: left;  display: inline-block">
+
+  <button type="primary" bindtap="addUser">添加用户信息</button>
+
+  <view class="link-colunm">
+    <navigator class="link" url="../operation/operation?userId={{item.userId}}">编辑</navigator> |
+
+    <text class="link" bindtap="deleteUser" data-userid="{{item.userId}}" data-username="{{item.userName}}"
+      data-index="{{index}}">删除</text>
+  </view>
+   -->
+
+
+<!-- <view bindtap="detail" data-userid="{{item.userId}}" data-username="{{item.userName}}" data-index="{{index}}"> -->
+
+
+<!-- <view class="imgFa">
+  <image src="../../images/test.png" class="img"></image>
+</view> -->
+<!-- <view class="widget">
+    <text class="column">UserID</text>
+    <text class="column">姓名</text>
+    <text class="column">地址</text>
+    <text class="link-column">操作</text>
+  </view> -->

@@ -1,0 +1,49 @@
+<!--pages/person/publish/publish.wxml-->
+<view class="nav">
+  <image src="/images/cover.jpg" mode="aspectFill" bindtap="changeImage"></image>
+</view>
+<view class="container">
+  <form bindsubmit="formSubmit" bindreset="formReset">
+
+    <view class="row">
+      <text>需求：</text>
+      <input type="text" name="demand" placeholder="请输入需求" value="{{demand}}" />
+    </view>
+
+    <view class="row">
+      <text>时间：</text>
+      <input type="text" name="time" placeholder="请输入时间" value="{{time}}" />
+    </view>
+
+    <view class="row">
+      <text>地址：</text>
+      <input type="text" name="address" placeholder="请输入地址" value="{{address}}" />
+    </view>
+
+    <view class="row">
+      <text>电话：</text>
+      <input type="text" name="telephone" placeholder="请输入电话" value="{{telephone}}" />
+    </view>
+
+    <view class="row">
+      <text>描述：</text>
+      <input type="text" name="context" placeholder="请输入描述" value="{{context}}" />
+    </view>
+
+    <view class="row">
+      <button type="primary" form-type="submit">提交</button>
+      <button type="primary" form-type="reset">清空</button>
+    </view>
+
+  </form>
+</view>
+
+<!-- 
+<view class="row">
+      <text>区域名：</text>
+      <input type="text" name="areaName" placeholder="请输入区域名" value="{{areaName}}" />
+    </view>
+    <view class="row">
+      <text>优先级：</text>
+      <input type="number" name="priority" placeholder="数值越大越靠前" value="{{priority}}" />
+    </view> -->

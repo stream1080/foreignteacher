@@ -1,0 +1,16 @@
+<!--pages/person/detailPerson/detailPerson.wxml-->
+<view class="nav">
+  <image src="/images/wbb5.jpg" mode="aspectFill" bindtap="changeImage"></image>
+</view>
+
+
+<view class="content">
+  <view>姓名：{{userName}}</view>
+  <view>性别：{{sex}}</view>
+  <view>年龄：{{age}}</view>
+  <view>电话：{{telephone}}</view>
+  <view>地址：{{address}}</view>
+  <view>国籍：{{nationality}}</view>
+  <view>语言：{{language}}</view>
+  <button type="primary" bindtap="editInfo" data-userId="{{userId}}">编辑信息</button>
+</view>

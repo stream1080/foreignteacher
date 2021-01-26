@@ -1,0 +1,49 @@
+{
+  "pages": [
+    "pages/login/login",
+    "pages/list/list",
+    "pages/person/person",
+    "pages/list/detail/detail",
+    "pages/operation/operation",
+    "pages/foreign/foreign",
+    "pages/foreign/detail/detail",
+    "pages/person/detailPerson/detailPerson",
+    "pages/person/publish/publish",
+    "pages/person/manage/manage",
+    "pages/person/manage/editPublish/editPulish",
+    "pages/person_foreign/publish_foreign/publish_foreign",
+    "pages/person_foreign/manage_foreign/manage_foreign",
+    "pages/person_foreign/foreign_editpublish/foreign_editpublish",
+    "pages/EditPassword/EditPassword"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "Weixin",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/list/list",
+        "text": "招聘",
+        "iconPath": "images/u.png",
+        "selectedIconPath": "images/u_select.png"
+      },
+      {
+        "pagePath": "pages/foreign/foreign",
+        "text": "外教",
+        "iconPath": "images/f.png",
+        "selectedIconPath": "images/f_select_b.png"
+      },
+      {
+        "pagePath": "pages/person/person",
+        "text": "我的",
+        "iconPath": "images/me.png",
+        "selectedIconPath": "images/me_select.png"
+      }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

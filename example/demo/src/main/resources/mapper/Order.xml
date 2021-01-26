@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.demo.dao.OrderDao">
+
+    <select id="queryOrder" resultType="com.example.demo.entity.Order">
+        SELECT orderId, userId,
+               teacherId, createTime, price,status
+        FROM orderlist
+    </select>
+
+    <select id="queryOrderById" resultType="com.example.demo.entity.Order">
+        SELECT orderId, userId,
+               teacherId, createTime, price,status
+        FROM orderlist
+        WHERE
+            orderId = #{orderId}
+    </select>
+
+    <insert id="insertOrder" useGeneratedKeys="true" keyProperty="orderId"
+            keyColumn="orderId" parameterType="com.example.demo.entity.Order">
+        INSERT INTO
+            orderlist(orderId, userId,
+                   teacherId, createTime, price,status)
+        VALUES
+        (#{orderId},#{userId},
+         #{teacherId},#{createTime},#{price},#{deman},#{time})
+    </insert>
+
+    <update id="updateOrder" parameterType="com.example.demo.entity.Order">
+        update orderlist
+        <set>
+            <if test="orderId != null">orderId=#{orderId},</if>
+            <if test="userId != null">userId=#{userId},</if>
+            <if test="teacherId != null">teacherId=#{teacherId}</if>
+            <if test="createTime != null">createTime=#{createTime},</if>
+            <if test="price != null">price=#{price},</if>
+            <if test="status != null">status=#{status},</if>
+        </set>
+        where orderId=#{orderId}
+    </update>
+
+    <delete id="deleteOrder">
+        DELETE FROM
+            orderlist
+        WHERE
+                orderid =
+                #{orderId}
+    </delete>
+
+</mapper>
+    
